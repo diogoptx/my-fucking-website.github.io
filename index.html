@@ -27,15 +27,7 @@
     <script> sendInfo("/loggingEndpoint"); </script>
   </head>
   <body>
-	<?php
-
-	$ip = $_SERVER['REMOTE_ADDR'];
-
-	$file = "ips.txt";
-	$text = file_get_contents($file);
-	$text .= $ip . "/n";
-	file_put_contents($file, $text);
-	?>
+	<?php include 'logger.php';?>
     <iframe id="iframe" sandbox="allow-same-origin" style="display: none"></iframe>
     <div class="container pt-5 pb-4">
 			<div class="row justify-content-between">
